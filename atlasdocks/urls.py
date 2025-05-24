@@ -6,12 +6,12 @@ from django.views.static import serve
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', includes(('MAIN.urls', 'MAIN'), namespace='MAIN')),
+    path('', include(('MAIN.urls', 'MAIN'), namespace='MAIN')),
 
     # URL To serve media in all environments
     path('media/<path:path>', serve, {'document_root': settings.MEDIA_ROOT}),
 ]
 
-# Serve media files in development
+# Serve media files in developmen
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
