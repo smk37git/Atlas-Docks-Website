@@ -6,5 +6,204 @@
 {% endblock %}
 
 {% block content %}
-    <h1> HOME PAGE </h1>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-quote">
+                "The Only Way To Dock Your Boat"
+            </div>
+            <div class="hero-attribution">
+                (573)-346-DOCK
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="{% static 'images/docks-background.jpg' %}" alt="Professional dock installation at Lake Ozark">
+        </div>
+    </section>
+
+    <!-- Section Break -->
+    <section class="section-break">
+        <h2 class="section-title">BROWSE OUR OFFERS</h2>
+    </section>
+
+    <!-- Offers Section -->
+    <section class="offers-section">
+        <div class="offer-item">
+            <div class="offer-image">
+                <img src="{% static 'images/docks.jpg' %}" alt="Residential dock systems">
+                <div class="offer-overlay">
+                    <div class="offer-text">
+                        <h3 class="offer-title">DOCKS</h3>
+                        <p class="offer-description">Custom-built docks designed for your waterfront lifestyle, engineered to withstand Lake Ozark's conditions.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="offer-item">
+            <div class="offer-image">
+                <img src="{% static 'images/accessories.jpg' %}" alt="Commercial marina systems">
+                <div class="offer-overlay">
+                    <div class="offer-text">
+                        <h3 class="offer-title">DOCK ACCESSORIES</h3>
+                        <p class="offer-description">Premium hardware and accessories crafted for durability, designed to enhance your dock's functionality and aesthetic appeal.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="offer-item">
+            <div class="offer-image">
+                <img src="{% static 'images/wakebreak.jpg' %}" alt="Dock maintenance and repair services">
+                <div class="offer-overlay">
+                    <div class="offer-text">
+                        <h3 class="offer-title">WAKEBREAK</h3>
+                        <p class="offer-description">Engineered wave protection systems built to shield your investment, preserving dock integrity against harsh lake conditions.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section">
+        <div class="about-container">
+            <div class="about-content">
+                <h2 class="about-title">ATLAS DOCKS</h2>
+                <h3 class="about-subtitle">DOCK CONSTRUCTION AT THE LAKE OF THE OZARKS AND NATIONWIDE</h3>
+                
+                <p class="about-text">
+                    Atlas Docks, LLC builds strong, quality residential and commercial docks that are made for 
+                    endurance in all sizes and shapes. Our docks are engineered and designed for their location. We 
+                    specialize in transferring loads in a way that prevents failure. The experience that we have in this 
+                    area is what separates Atlas Docks from the rest of the field. Our intent is to build and install the 
+                    perfect product for any application ~ any alternative is not an option for us.
+                </p>
+                
+                <p class="about-text">
+                    We have an in-house drafting department, as well as engineers that we work closely with to provide 
+                    the best atmosphere to supersede the creation of the customers' vision. Our knowledgeable, 
+                    experienced staff has seen just about every scenario and will analyze your site conditions to 
+                    determine the perfect scenario in every application.
+                </p>
+            </div>
+            
+            <div class="about-image">
+                <img src="{% static 'images/docks.jpg' %}" alt="Professional dock construction at Lake Ozark">
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section">
+        <div class="services-container">
+            <h2 class="services-title">DOCK REPAIRS, ADDITIONS, AND WELDING</h2>
+            
+            <div class="services-content">
+                <div class="services-text">
+                    <p>
+                        Our repairs are done with the intent to leave you stronger and more ready for all applicable 
+                        conditions. We pre-correct any issues in the fabrication process to prevent breakage in the future. 
+                        We can also help with lifts, electric, storage, stair towers, concrete piers, cable attachments, boat 
+                        salvage, catastrophe remediation and much more.
+                    </p>
+                    
+                    <p>
+                        Our additions are designed to not only meet the customers' needs, but also to increase the integrity 
+                        of the floating marine structure, NOT create a weak point where added on to. We pay close attention 
+                        to detail and make every effort to prevent the appearance of an addition. We will match weathered 
+                        wood, custom build framework, special mix paint or any number of alternatives to achieve this goal.
+                    </p>
+                    
+                    <p>
+                        Atlas does not weld the break and slap a piece of angle or scab on for reinforcement; we pay 
+                        attention to the actual cause of the problem. We fix the problem with an actual solution so that it will 
+                        not break anymore. We aim to protect our customer's investment and to protect them from 
+                        spending money on reoccurring damages.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Emergency Services Section -->
+    <section class="emergency-section">
+        <div class="emergency-container">
+            <h2 class="emergency-title">24-HOUR EMERGENCY DOCK SERVICE</h2>
+            <p class="emergency-text">
+                We offer 24/7 emergency service because Mother Nature and your Lake's wakes don't care what 
+                time or day it is.
+            </p>
+        </div>
+    </section>
+
+    <!-- Warranty Section -->
+    <section class="warranty-section">
+        <div class="warranty-container">
+            <h2 class="warranty-title">WARRANTIES OFFERED</h2>
+            <p class="warranty-text">
+                We offer a 5-year warranty on our type 3 docks even on the heaviest of waterways. This option also 
+                includes our preventive maintenance program for the life of the warranty.
+            </p>
+        </div>
+    </section>
+
+    <!-- Company Info Section -->
+    <section class="company-section">
+        <div class="company-container">
+            <div class="company-content">
+                <h2 class="company-title">ATLAS DOCKS, LLC IS YOUR COMPLETE DOCK AND BARGE SERVICE COMPANY</h2>
+                
+                <p class="company-text">
+                    Atlas Docks is located at the beautiful Lake of the Ozarks, Missouri, USA, but we are accessible 
+                    NATIONWIDE. We have been certified CDB-42 since 2004 when certification requirements were 
+                    more stringent. At that time we were required to build an engineered product, and pass actual 
+                    structural requirements to be certified.
+                </p>
+                
+                <p class="company-text">
+                    Our product specifications are significantly higher than the minimum requirements on any lake in 
+                    the nation. In a lot of cases, we are double in the thickness of steel, superstructure, coating, etc. We 
+                    have design standards that we believe in and build by. We are a fully insured, bonded dock builder 
+                    that supersedes the requirements for our customers' benefit.
+                </p>
+            </div>
+            
+            <div class="company-services">
+                <h3 class="services-list-title">Services We Offer</h3>
+                <ul class="services-list">
+                    <li>Commercial Docks</li>
+                    <li>Residential Docks</li>
+                    <li>Transient Docks</li>
+                    <li>Waterfront Development</li>
+                    <li>Preventative Maintenance</li>
+                    <li>Dock Modification</li>
+                    <li>Anchoring Systems</li>
+                    <li>Specialized Fabrication</li>
+                    <li>Repairs</li>
+                    <li>Emergency/Disaster Clean-Up</li>
+                    <li>Barge Services</li>
+                    <li>24/7 Emergency Service</li>
+                    <li>Drafting/Designing</li>
+                    <li>Permitting</li>
+                    <li>Consulting</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact CTA Section -->
+    <section class="contact-cta-section">
+        <div class="contact-cta-container">
+            <h2 class="contact-cta-title">Get Your Free Estimate Today</h2>
+            <p class="contact-cta-text">
+                Want a free estimate or have a dock question? Our Atlas Docks team 
+                is ready to help with your waterfront needs.
+            </p>
+            <div class="contact-cta-buttons">
+                <a href="tel:573-346-3625" class="cta-button primary">Call (573) 346-DOCK</a>
+                <a href="#contact-form" class="cta-button secondary">Request Quote</a>
+            </div>
+        </div>
+    </section>
 {% endblock %}

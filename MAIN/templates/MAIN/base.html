@@ -20,7 +20,9 @@
 
         <!-- Extra Meta Tags for specific Pages -->
         {% block extra_meta %}{% endblock %}
-
+    </head>
+    
+    <body>
         <div class="page-wrapper">
 
             <!-- Navigation and Annoucement Wrapper -->
@@ -36,7 +38,7 @@
                     
                     <ul class="nav-links">
                         <li class="nav-item">
-                            <a href="#" class="nav-link">HOME</a>
+                            <a href="{% url 'MAIN:home' %}" class="nav-link">HOME</a>
                         </li>
                         <li class="nav-item">
                             <a href="#" class="nav-link">PRODUCTS</a>
@@ -72,6 +74,10 @@
                 </nav>
             </div>
 
+            <!-- Main Content -->
+            <main>
+                {% block content %}{% endblock %}
+            </main>
 
             <!-- Footer -->
             <footer class="footer">
@@ -114,6 +120,5 @@
                 </div>
             </footer>
         </div>
-
-    </head>
+    </body>
 </html>
