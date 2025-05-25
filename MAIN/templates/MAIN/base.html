@@ -28,9 +28,11 @@
 
                 <!-- Navigation Bar -->
                 <nav class="navbar">
-                    <div class="logo-space">
-                        LOGO SPACE
-                    </div>
+                    <a href="{% url 'MAIN:home' %}" class="logo-space">
+                        <div class="logo-image">
+                            <img src="{% static 'images/AtlasDocksLogo.png' %}" alt="logo">
+                        </div>
+                    </a>
                     
                     <ul class="nav-links">
                         <li class="nav-item">
