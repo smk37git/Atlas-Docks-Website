@@ -71,6 +71,11 @@
                             <a href="#" class="nav-link">CONTACT</a>
                         </li>
                     </ul>
+
+                    <!-- Mobile Menu Button -->
+                    <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                        <i class="fas fa-bars"></i>
+                    </button>
                 </nav>
             </div>
 
@@ -120,5 +125,86 @@
                 </div>
             </footer>
         </div>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu" onclick="closeMobileMenu(event)">
+            <div class="mobile-menu-content" onclick="event.stopPropagation()">
+                <div class="mobile-menu-header">
+                    <div class="mobile-logo">
+                        <img src="{% static 'images/AtlasDocksLogo.png' %}" alt="logo">
+                    </div>
+                    <button class="mobile-menu-close" onclick="closeMobileMenu()">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                
+                <ul class="mobile-nav-items">
+                    <li class="mobile-nav-item">
+                        <a href="{% url 'MAIN:home' %}" class="mobile-nav-link">HOME</a>
+                    </li>
+                    <li class="mobile-nav-item">
+                        <a href="#" class="mobile-nav-link mobile-nav-toggle" onclick="toggleDropdown(this)">PRODUCTS</a>
+                        <div class="mobile-dropdown">
+                            <a href="#" class="mobile-dropdown-item">New Residential</a>
+                            <a href="#" class="mobile-dropdown-item">New Commercial</a>
+                            <a href="#" class="mobile-dropdown-item">Ramps & Walkways</a>
+                            <a href="#" class="mobile-dropdown-item">Transient Systems</a>
+                            <a href="#" class="mobile-dropdown-item">Additions</a>
+                            <a href="#" class="mobile-dropdown-item">Accessories</a>
+                        </div>
+                    </li>
+                    <li class="mobile-nav-item">
+                        <a href="#" class="mobile-nav-link mobile-nav-toggle" onclick="toggleDropdown(this)">SERVICES</a>
+                        <div class="mobile-dropdown">
+                            <a href="#" class="mobile-dropdown-item">Emergency Service</a>
+                            <a href="#" class="mobile-dropdown-item">Preventative Maintenance</a>
+                            <a href="#" class="mobile-dropdown-item">Commercial Repairs</a>
+                        </div>
+                    </li>
+                    <li class="mobile-nav-item">
+                        <a href="#" class="mobile-nav-link mobile-nav-toggle" onclick="toggleDropdown(this)">ABOUT</a>
+                        <div class="mobile-dropdown">
+                            <a href="#" class="mobile-dropdown-item">About Us</a>
+                            <a href="#" class="mobile-dropdown-item">Testimonials</a>
+                            <a href="#" class="mobile-dropdown-item">Careers</a>
+                        </div>
+                    </li>
+                    <li class="mobile-nav-item">
+                        <a href="#" class="mobile-nav-link">CONTACT</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <script>
+            function toggleMobileMenu() {
+                const mobileMenu = document.getElementById('mobileMenu');
+                mobileMenu.classList.toggle('active');
+                document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+            }
+
+            function closeMobileMenu(event) {
+                if (event && event.target !== event.currentTarget) return;
+                const mobileMenu = document.getElementById('mobileMenu');
+                mobileMenu.classList.remove('active');
+                document.body.style.overflow = '';
+                document.querySelectorAll('.mobile-nav-item.active').forEach(item => {
+                    item.classList.remove('active');
+                });
+            }
+
+            function toggleDropdown(element) {
+                event.preventDefault();
+                const parentItem = element.closest('.mobile-nav-item');
+                document.querySelectorAll('.mobile-nav-item.active').forEach(item => {
+                    if (item !== parentItem) item.classList.remove('active');
+                });
+                parentItem.classList.toggle('active');
+            }
+
+            window.addEventListener('resize', function() {
+                if (window.innerWidth > 768) closeMobileMenu();
+            });
+        </script>
     </body>
 </html>

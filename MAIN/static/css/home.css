@@ -166,6 +166,7 @@
 /* About Section */
 .about-section {
     padding: 5rem 0;
+    text-align: center;
 }
 
 .about-container {
@@ -365,8 +366,8 @@
 
 /* Company Section */
 .company-section {
-    background: #f8f9fa;
     padding: 5rem 0;
+    background: white;
 }
 
 .company-container {
@@ -613,7 +614,7 @@
     }
     
     .cta-button {
-        width: 250px;
+        width: 300px;
         text-align: center;
     }
     
